@@ -1,0 +1,65 @@
+[
+	{
+		"name" : "The Case of Charles Dexter Ward",
+		"coauthor": "",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/cdw.aspx",
+		"written" : 1927,
+		"published" : 1927
+	},
+	{
+		"name" : "History of the Necronomicon",
+		"coauthor": "",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/hn.aspx",
+		"written" : 1927,
+		"published" : 1938
+	},
+	{
+		"name" : "The Dunwich Horror",
+		"coauthor": "",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/dh.aspx",
+		"written" : 1928,
+		"published" : 1929
+	},
+	{
+		"name" : "The Electric Executioner",
+		"coauthor": "Adolphe de Castro",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/ee.aspx",
+		"written" : 1929,
+		"published" : 1930
+	},
+	{
+		"name" : "The Whisperer in Darkness",
+		"coauthor": "",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/wid.aspx",
+		"written" : 1930,
+		"published" : 1932
+	},
+	{
+		"name" : "At the Mountains of Madness",
+		"coauthor": "",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/mm.aspx",
+		"written" : 1931,
+		"published" : 1931
+	},
+	{
+		"name" : "The Horror in the Museum",
+		"coauthor": "Hazel Heald",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/hm.aspx",
+		"written" : 1932,
+		"published" : 1932
+	},
+	{
+		"name" : "Through the Gates of the Silver Key",
+		"coauthor": "E. Hoffmann Price",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/tgsk.aspx",
+		"written" : 1933,
+		"published" : 1934
+	},
+	{
+		"name" : "The Haunter of the Dark",
+		"coauthor": "",
+		"link" : "http://www.hplovecraft.com/writings/texts/fiction/hd.aspx",
+		"written" : 1935,
+		"published" : 1935
+	}
+]
