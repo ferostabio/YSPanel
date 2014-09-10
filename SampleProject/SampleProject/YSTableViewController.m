@@ -7,29 +7,16 @@
 //
 
 #import "YSTableViewController.h"
+#import "UIScrollView+YSPanel.h"
 #import "YSTableViewCell.h"
+#import "NSArray+JSON.h"
 
-@implementation NSArray (JSON)
-
-+ (NSArray *) arrayWithJSONString:(NSString *)string
-{
-    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *error = nil;
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (array != nil && error == nil) {
-        return array;
-    } else {
-        return nil;
-    }
-}
-
-@end
+#define kCellIdentifier @"YSCell"
 
 @interface YSTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) IBOutlet UILabel *panelLabel;
-@property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *stories;
 
 @end
 
@@ -39,38 +26,34 @@
 {
     [super viewDidLoad];
 
-
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"works"
-                                                     ofType:@"json"];
-    NSString* content = [NSString stringWithContentsOfFile:path
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"works" ofType:@"json"];
+    NSString *content = [NSString stringWithContentsOfFile:path
                                                   encoding:NSUTF8StringEncoding
                                                      error:nil];
-    _dataSource = [NSArray arrayWithJSONString:content];
+    _stories = [NSArray arrayWithJSONString:content];
 
-    [self observeBarLocationForTableView:_tableView withBlock:^(CGPoint location, NSIndexPath *indexPath) {
-        NSDictionary *storyDictionary = _dataSource[indexPath.row];
-        self.panelText.text = [NSString stringWithFormat:@"written in %@", storyDictionary[@"written"]];
+    __weak YSTableViewController *weakSelf = self;
+    [_tableView addTableViewPanelWithBlock:^(CGPoint location, NSIndexPath *indexPath) {
+        NSDictionary *storyDictionary = _stories[indexPath.row];
+        weakSelf.tableView.panelView.titleLabel.text = [NSString stringWithFormat:@"written in \n%@", storyDictionary[@"written"]];
     }];
-
-    self.panelText.numberOfLines = 2;
-    self.panelText.font = [UIFont boldSystemFontOfSize:11.0];
 }
 
 #pragma mark UITableView protocol
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSource.count;
+    return _stories.count;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    YSTableViewCell *cell = (YSTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"YSCell"];
+    YSTableViewCell *cell = (YSTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (cell == nil) {
-        cell = [[YSTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YSCell"];
+        cell = [[YSTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
     }
 
-    NSDictionary *storyDictionary = _dataSource[indexPath.row];
+    NSDictionary *storyDictionary = _stories[indexPath.row];
     cell.storyLabel.text = storyDictionary[@"name"];
     cell.coauthorLabel.text = storyDictionary[@"coauthor"];
     return cell;

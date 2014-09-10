@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Web View Controller - First-->
@@ -9,28 +10,18 @@
             <objects>
                 <viewController title="First" id="2" customClass="YSWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-xR-oo2">
+                            <webView contentMode="scaleToFill" id="Uoy-xR-oo2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="18V-fs-0mz"/>
                                 </connections>
                             </webView>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTG-2G-h4A"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Uoy-xR-oo2" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="4Rx-DS-jop"/>
-                            <constraint firstItem="YTG-2G-h4A" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="8v2-6C-jcp"/>
-                            <constraint firstItem="YTG-2G-h4A" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="NRl-kP-rkU"/>
-                            <constraint firstItem="YTG-2G-h4A" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="Oed-0f-958"/>
-                            <constraint firstItem="Uoy-xR-oo2" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="PYH-rD-QBP"/>
-                            <constraint firstItem="YTG-2G-h4A" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="fhy-yF-9E0"/>
-                            <constraint firstItem="Uoy-xR-oo2" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="sRh-cM-ySp"/>
-                            <constraint firstItem="Uoy-xR-oo2" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="uw5-nv-LVo"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UIWebView" image="first.png" id="7"/>
                     <connections>
@@ -46,46 +37,34 @@
             <objects>
                 <viewController id="Qrm-MZ-xIY" customClass="YSTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPB-SS-6Pm">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hUa-8h-qA7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="hUa-8h-qA7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="YSCell" rowHeight="120" id="wtL-pN-Jn0" customClass="YSTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wtL-pN-Jn0" id="Mzv-X2-M6f">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNJ-gs-ble">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="W61-0b-r8P"/>
-                                                    </constraints>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mNJ-gs-ble">
+                                                    <rect key="frame" x="20" y="20" width="280" height="38"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5x-SS-v1R">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="wPV-Me-Tlk"/>
-                                                        <constraint firstAttribute="width" constant="171" id="yGi-wp-V26"/>
-                                                    </constraints>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e5x-SS-v1R">
+                                                    <rect key="frame" x="20" y="83" width="171" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="e5x-SS-v1R" secondAttribute="bottom" constant="16" id="Yfb-Xy-qHO"/>
-                                            <constraint firstItem="mNJ-gs-ble" firstAttribute="leading" secondItem="wtL-pN-Jn0" secondAttribute="leading" constant="20" type="default" id="ZK9-4t-JGE"/>
-                                            <constraint firstItem="mNJ-gs-ble" firstAttribute="top" secondItem="wtL-pN-Jn0" secondAttribute="top" constant="20" type="default" id="azQ-2y-6SE"/>
-                                            <constraint firstAttribute="trailing" secondItem="mNJ-gs-ble" secondAttribute="trailing" constant="20" type="default" id="bJf-vg-SG6"/>
-                                            <constraint firstItem="e5x-SS-v1R" firstAttribute="leading" secondItem="wtL-pN-Jn0" secondAttribute="leading" constant="20" type="default" id="s6u-2n-Uov"/>
-                                        </constraints>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="coauthorLabel" destination="e5x-SS-v1R" id="HCz-t8-AOg"/>
                                             <outlet property="storyLabel" destination="mNJ-gs-ble" id="4vD-fz-q5F"/>
@@ -99,12 +78,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hUa-8h-qA7" firstAttribute="top" secondItem="XPB-SS-6Pm" secondAttribute="top" type="default" id="8dJ-6b-kBu"/>
-                            <constraint firstItem="hUa-8h-qA7" firstAttribute="bottom" secondItem="XPB-SS-6Pm" secondAttribute="bottom" type="default" id="EEl-EL-mcy"/>
-                            <constraint firstItem="hUa-8h-qA7" firstAttribute="trailing" secondItem="XPB-SS-6Pm" secondAttribute="trailing" type="default" id="Qr2-js-fEx"/>
-                            <constraint firstItem="hUa-8h-qA7" firstAttribute="leading" secondItem="XPB-SS-6Pm" secondAttribute="leading" type="default" id="rIq-YK-5gP"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UITableView" image="first.png" id="ehU-sb-AMa"/>
                     <connections>
@@ -120,10 +93,11 @@
             <objects>
                 <viewController title="Second" id="3" customClass="YSTextViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A31-CY-8iq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="A31-CY-8iq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -134,12 +108,6 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="A31-CY-8iq" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="JSj-Fg-KGG"/>
-                            <constraint firstItem="A31-CY-8iq" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="M55-3S-NQF"/>
-                            <constraint firstItem="A31-CY-8iq" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="jER-Qg-3VC"/>
-                            <constraint firstItem="A31-CY-8iq" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="xyA-Jq-mzE"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UITextView" image="first.png" id="6"/>
                     <connections>
@@ -154,6 +122,7 @@
         <scene sceneID="15">
             <objects>
                 <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -174,46 +143,6 @@
     <resources>
         <image name="first.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="YSPanelViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YSPanelViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="panelText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="YSTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YSTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="coauthorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="storyLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="YSTableViewController" superclassName="YSPanelViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YSTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="panelLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="YSTextViewController" superclassName="YSPanelViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YSTextViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="panelLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="YSWebViewController" superclassName="YSPanelViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YSWebViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="panelLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

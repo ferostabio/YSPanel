@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00226AF819B8A23B006FAD3D /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 00226AF719B8A23B006FAD3D /* NSArray+JSON.m */; };
+		00226AFE19B8A4E5006FAD3D /* UIScrollView+YSPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00226AFD19B8A4E5006FAD3D /* UIScrollView+YSPanel.m */; };
 		AC480289174087B700F27B78 /* silver_key.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC480288174087B700F27B78 /* silver_key.txt */; };
 		AC48028B174087C500F27B78 /* works.json in Resources */ = {isa = PBXBuildFile; fileRef = AC48028A174087C500F27B78 /* works.json */; };
 		AC8DE98217459ADC00BE4301 /* YSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8DE98117459ADC00BE4301 /* YSTableViewCell.m */; };
@@ -21,15 +23,17 @@
 		ACE85E34173EB05100442C06 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE85E33173EB05100442C06 /* Default@2x.png */; };
 		ACE85E36173EB05100442C06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE85E35173EB05100442C06 /* Default-568h@2x.png */; };
 		ACE85E39173EB05100442C06 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE85E37173EB05100442C06 /* MainStoryboard.storyboard */; };
-		ACE85E3E173EB05100442C06 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE85E3D173EB05100442C06 /* first.png */; };
 		ACE85E40173EB05100442C06 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE85E3F173EB05100442C06 /* first@2x.png */; };
-		ACE85E50173EB14800442C06 /* YSPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE85E4F173EB14800442C06 /* YSPanelViewController.m */; };
 		ACE85E52173EB1AC00442C06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE85E51173EB1AC00442C06 /* QuartzCore.framework */; };
 		ACE85E59173EB44300442C06 /* YSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE85E58173EB44300442C06 /* YSWebViewController.m */; };
 		ACE85E60173EBE8900442C06 /* YSTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE85E5F173EBE8900442C06 /* YSTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00226AF619B8A23B006FAD3D /* NSArray+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSON.h"; sourceTree = "<group>"; };
+		00226AF719B8A23B006FAD3D /* NSArray+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSON.m"; sourceTree = "<group>"; };
+		00226AFC19B8A4E5006FAD3D /* UIScrollView+YSPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YSPanel.h"; sourceTree = "<group>"; };
+		00226AFD19B8A4E5006FAD3D /* UIScrollView+YSPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YSPanel.m"; sourceTree = "<group>"; };
 		AC480288174087B700F27B78 /* silver_key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silver_key.txt; sourceTree = "<group>"; };
 		AC48028A174087C500F27B78 /* works.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = works.json; sourceTree = "<group>"; };
 		AC8DE98017459ADC00BE4301 /* YSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTableViewCell.h; sourceTree = "<group>"; };
@@ -50,10 +54,7 @@
 		ACE85E33173EB05100442C06 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		ACE85E35173EB05100442C06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACE85E38173EB05100442C06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		ACE85E3D173EB05100442C06 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		ACE85E3F173EB05100442C06 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		ACE85E4E173EB14800442C06 /* YSPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSPanelViewController.h; path = ../../YSPanel/YSPanelViewController.h; sourceTree = "<group>"; };
-		ACE85E4F173EB14800442C06 /* YSPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSPanelViewController.m; path = ../../YSPanel/YSPanelViewController.m; sourceTree = "<group>"; };
 		ACE85E51173EB1AC00442C06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACE85E57173EB44300442C06 /* YSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSWebViewController.h; sourceTree = "<group>"; };
 		ACE85E58173EB44300442C06 /* YSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSWebViewController.m; sourceTree = "<group>"; };
@@ -76,9 +77,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00226AFF19B8A8B1006FAD3D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC8DE98017459ADC00BE4301 /* YSTableViewCell.h */,
+				AC8DE98117459ADC00BE4301 /* YSTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		AC4802871740878400F27B78 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC48028E17408A0E00F27B78 /* Images */,
 				AC48028A174087C500F27B78 /* works.json */,
 				AC480288174087B700F27B78 /* silver_key.txt */,
 			);
@@ -88,7 +99,6 @@
 		AC48028E17408A0E00F27B78 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ACE85E3D173EB05100442C06 /* first.png */,
 				ACE85E3F173EB05100442C06 /* first@2x.png */,
 			);
 			name = Images;
@@ -97,6 +107,7 @@
 		AC8F9E5B175A86CC001104A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				00226AFF19B8A8B1006FAD3D /* Cells */,
 				ACE85E57173EB44300442C06 /* YSWebViewController.h */,
 				ACE85E58173EB44300442C06 /* YSWebViewController.m */,
 				ACE85E5E173EBE8900442C06 /* YSTextViewController.h */,
@@ -107,13 +118,13 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		AC8F9E5C175A86D6001104A9 /* Helpers */ = {
+		AC8F9E5C175A86D6001104A9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				AC8DE98017459ADC00BE4301 /* YSTableViewCell.h */,
-				AC8DE98117459ADC00BE4301 /* YSTableViewCell.m */,
+				00226AF619B8A23B006FAD3D /* NSArray+JSON.h */,
+				00226AF719B8A23B006FAD3D /* NSArray+JSON.m */,
 			);
-			name = Helpers;
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		ACE85E13173EB05100442C06 = {
@@ -151,9 +162,8 @@
 				ACE85E2E173EB05100442C06 /* YSAppDelegate.h */,
 				ACE85E2F173EB05100442C06 /* YSAppDelegate.m */,
 				ACE85E37173EB05100442C06 /* MainStoryboard.storyboard */,
-				AC48028E17408A0E00F27B78 /* Images */,
 				AC4802871740878400F27B78 /* Files */,
-				AC8F9E5C175A86D6001104A9 /* Helpers */,
+				AC8F9E5C175A86D6001104A9 /* Utils */,
 				AC8F9E5B175A86CC001104A9 /* ViewControllers */,
 				ACE85E26173EB05100442C06 /* Supporting Files */,
 			);
@@ -177,8 +187,8 @@
 		ACE85E4D173EB13800442C06 /* YSPanel */ = {
 			isa = PBXGroup;
 			children = (
-				ACE85E4E173EB14800442C06 /* YSPanelViewController.h */,
-				ACE85E4F173EB14800442C06 /* YSPanelViewController.m */,
+				00226AFC19B8A4E5006FAD3D /* UIScrollView+YSPanel.h */,
+				00226AFD19B8A4E5006FAD3D /* UIScrollView+YSPanel.m */,
 			);
 			name = YSPanel;
 			sourceTree = "<group>";
@@ -240,7 +250,6 @@
 				ACE85E34173EB05100442C06 /* Default@2x.png in Resources */,
 				ACE85E36173EB05100442C06 /* Default-568h@2x.png in Resources */,
 				ACE85E39173EB05100442C06 /* MainStoryboard.storyboard in Resources */,
-				ACE85E3E173EB05100442C06 /* first.png in Resources */,
 				ACE85E40173EB05100442C06 /* first@2x.png in Resources */,
 				AC480289174087B700F27B78 /* silver_key.txt in Resources */,
 				AC48028B174087C500F27B78 /* works.json in Resources */,
@@ -254,12 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00226AFE19B8A4E5006FAD3D /* UIScrollView+YSPanel.m in Sources */,
 				ACE85E2C173EB05100442C06 /* main.m in Sources */,
 				ACE85E30173EB05100442C06 /* YSAppDelegate.m in Sources */,
-				ACE85E50173EB14800442C06 /* YSPanelViewController.m in Sources */,
 				ACE85E59173EB44300442C06 /* YSWebViewController.m in Sources */,
 				ACE85E60173EBE8900442C06 /* YSTextViewController.m in Sources */,
 				AC93CC24173F52D60030B88A /* YSTableViewController.m in Sources */,
+				00226AF819B8A23B006FAD3D /* NSArray+JSON.m in Sources */,
 				AC8DE98217459ADC00BE4301 /* YSTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +358,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleProject/SampleProject-Prefix.pch";
 				INFOPLIST_FILE = "SampleProject/SampleProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -359,6 +370,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleProject/SampleProject-Prefix.pch";
 				INFOPLIST_FILE = "SampleProject/SampleProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

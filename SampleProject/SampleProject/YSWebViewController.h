@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Federico Erostarbe. All rights reserved.
 //
 
-#import "YSPanelViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface YSWebViewController : YSPanelViewController
+@interface YSWebViewController : UIViewController
 
 @end
