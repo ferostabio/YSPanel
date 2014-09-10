@@ -1,45 +1,49 @@
 YSPanel
 ===
 
-By using YSPanel it's posible to have a deeper control and knowledge of a UIScrollView in a simple way. All the magic is done thanks to KVO, since YSPanelViewController observes the contentOffset property of a UIScrollView (or one of it's subclasses).
-  
+YSPanel uses KVO and the Objective-C runtime to attach a view to the `UIScrollView` indicator and at the same time to provide some useful information.
+
 **Usage**
 
-Subclass YSPanelViewController and implement one of the following methods on viewDidLoad:
+```
+[_scrollView addDefaultPanelWithBlock:^(CGPoint location, CGFloat percent) {
+	// Do your thing
+}];
+```
 
-    - (void) observeBarLocation:(UIScrollView *)sv withBlock:(DefaultBlock)block;
-    - (void) observeBarLocationForTextView:(UITextView *)sv withBlock:(TextViewBlock)block;
-    - (void) observeBarLocationForTableView:(UITableView *)sv withBlock:(TableViewBlock)block;
+You can use it in a `UIWebView` by using `_webView.scrollView` instead. And if you have a `UITextView` or a `UITableView`, by calling the following convenience methods you can get the text line and the index path.
 
+```
+[_textView addTextViewPanelWithBlock:^(CGPoint location, NSInteger line) {
+	// Etc  
+}];
 
-**Example**
+[_tableView addTableViewPanelWithBlock:^(CGPoint location, NSIndexPath *indexPath) {
+	// Etc
+}];
 
-The default methods for any UIScrollView subclass and returns a block with the location and the percent of the bar's content.
+```
 
-    [self observeBarLocation:_webView.scrollView withBlock:^(CGPoint location, CGFloat percent) {
-        NSLog(@"%f%%", percent);
-    }];
-   
-There are also convenience methods to track a UITableView (which returns the indexPath instead of the percent) and a UITextView, which returns the line number.
+**Customization**
 
-    [self observeBarLocationForTextView:_textView withBlock:^(CGPoint location, NSInteger line) {
-        NSLog(@"%d", line);
-    }];
+By defeault `YSPanel` has a view attached to the scroll view's bar on the right. 
 
-**Custom View**
+```
+@property (nonatomic, strong) YSPanelView *panelView;
+```
 
-By defeault YSPanelViewController has a view attached on the right, near the scroll bar. But it is possible to attach any view and position it both on the right and at the center of the screen by calling the following method
+It is possible to do some customizing to it and center it, but most important: you can add any view to it by setting the customView property. `YSPanelView` object has the following properties:
 
-    - (void) attachView:(UIView *)v centered:(BOOL)flag;
+```
+@property (nonatomic, strong) UIView *customView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, assign) BOOL centered;
+```
 
-**Installing**
+**Installation**
 
-Drag and drop YSPanelViewController .h and .m onto your project.
-  
-**Dependencies**
+Manual: just drag and drop `UIScrollView+YSPanel` .h and .m onto your project. You have to include `QuartzCore` and, in case you aren't using arc, ***you should***.
 
-The only requirement to use YSPanel is to include in the project QuartzCore.
-  
 **License**
 
 Copyright (c) 2013 Federico Erostarbe.

@@ -101,7 +101,7 @@ static char UIScrollViewYSPanelView;
     }
 }
 
-- (UIView *) bar
+- (UIView *) indicator
 {
     return self.subviews.lastObject;
 }
@@ -120,31 +120,30 @@ static char UIScrollViewYSPanelView;
     }
     
     [self updateFrame];
-    [self answerBlock:[self barCenter]];
+    [self answerBlock:[self indicatorCenter]];
 }
 
 - (void) updateFrame
 {
+    UIView *indicator = _scrollView.indicator;
     if (!self.superview) {
-        [_scrollView.bar addSubview:self];
+        [indicator addSubview:self];
     }
-    UIView *bar = _scrollView.bar;
     
     CGRect infoPanelFrame = self.frame;
     infoPanelFrame.origin.x = self.x;
-    infoPanelFrame.origin.y = [self y:bar.frame];
+    infoPanelFrame.origin.y = [self y:indicator.frame];
     
     self.frame = infoPanelFrame;
 }
 
 #pragma mark - UI
 
-- (CGPoint) barCenter
+- (CGPoint) indicatorCenter
 {
     CGPoint p = CGPointZero;
     if ([_scrollView isKindOfClass:[UIScrollView class]]) {
-        UIView *indicator = _scrollView.subviews.lastObject;
-        CGRect indicatorFrame = [indicator frame];
+        CGRect indicatorFrame = _scrollView.indicator.frame;
         p = CGPointMake(0, indicatorFrame.origin.y + indicatorFrame.size.height / 2);
     }
     return p;
@@ -161,10 +160,10 @@ static char UIScrollViewYSPanelView;
     return x;
 }
 
-- (CGFloat) y:(CGRect)barFrame
+- (CGFloat) y:(CGRect)indicatorFrame
 {
     CGRect infoPanelFrame = self.frame;
-    return barFrame.size.height / 2 - infoPanelFrame.size.height / 2;
+    return indicatorFrame.size.height / 2 - infoPanelFrame.size.height / 2;
 }
 
 #pragma -
