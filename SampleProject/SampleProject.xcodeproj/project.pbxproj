@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00226AF819B8A23B006FAD3D /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 00226AF719B8A23B006FAD3D /* NSArray+JSON.m */; };
-		00226AFE19B8A4E5006FAD3D /* UIScrollView+YSPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00226AFD19B8A4E5006FAD3D /* UIScrollView+YSPanel.m */; };
+		004A3E0319C09B6F00BF7C2B /* UIScrollView+YSPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 004A3E0219C09B6F00BF7C2B /* UIScrollView+YSPanel.m */; };
 		AC480289174087B700F27B78 /* silver_key.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC480288174087B700F27B78 /* silver_key.txt */; };
 		AC48028B174087C500F27B78 /* works.json in Resources */ = {isa = PBXBuildFile; fileRef = AC48028A174087C500F27B78 /* works.json */; };
 		AC8DE98217459ADC00BE4301 /* YSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8DE98117459ADC00BE4301 /* YSTableViewCell.m */; };
@@ -32,8 +32,8 @@
 /* Begin PBXFileReference section */
 		00226AF619B8A23B006FAD3D /* NSArray+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSON.h"; sourceTree = "<group>"; };
 		00226AF719B8A23B006FAD3D /* NSArray+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSON.m"; sourceTree = "<group>"; };
-		00226AFC19B8A4E5006FAD3D /* UIScrollView+YSPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YSPanel.h"; sourceTree = "<group>"; };
-		00226AFD19B8A4E5006FAD3D /* UIScrollView+YSPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YSPanel.m"; sourceTree = "<group>"; };
+		004A3E0119C09B6F00BF7C2B /* UIScrollView+YSPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+YSPanel.h"; path = "../../UIScrollView+YSPanel.h"; sourceTree = "<group>"; };
+		004A3E0219C09B6F00BF7C2B /* UIScrollView+YSPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+YSPanel.m"; path = "../../UIScrollView+YSPanel.m"; sourceTree = "<group>"; };
 		AC480288174087B700F27B78 /* silver_key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silver_key.txt; sourceTree = "<group>"; };
 		AC48028A174087C500F27B78 /* works.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = works.json; sourceTree = "<group>"; };
 		AC8DE98017459ADC00BE4301 /* YSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTableViewCell.h; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 		ACE85E4D173EB13800442C06 /* YSPanel */ = {
 			isa = PBXGroup;
 			children = (
-				00226AFC19B8A4E5006FAD3D /* UIScrollView+YSPanel.h */,
-				00226AFD19B8A4E5006FAD3D /* UIScrollView+YSPanel.m */,
+				004A3E0119C09B6F00BF7C2B /* UIScrollView+YSPanel.h */,
+				004A3E0219C09B6F00BF7C2B /* UIScrollView+YSPanel.m */,
 			);
 			name = YSPanel;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00226AFE19B8A4E5006FAD3D /* UIScrollView+YSPanel.m in Sources */,
+				004A3E0319C09B6F00BF7C2B /* UIScrollView+YSPanel.m in Sources */,
 				ACE85E2C173EB05100442C06 /* main.m in Sources */,
 				ACE85E30173EB05100442C06 /* YSAppDelegate.m in Sources */,
 				ACE85E59173EB44300442C06 /* YSWebViewController.m in Sources */,
